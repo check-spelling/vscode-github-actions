@@ -38,9 +38,9 @@ export async function getSession(skipPrompt = false): Promise<vscode.Authenticat
   }
 
   signInPrompted = true;
-  const signInAction = "Sign in to GitHub";
+  const signInAction = "Sign into GitHub";
   vscode.window
-    .showInformationMessage("Sign in to GitHub to access your repositories and GitHub Actions workflows.", signInAction)
+    .showInformationMessage("Sign into GitHub to access your repositories and GitHub Actions workflows.", signInAction)
     .then(
       async result => {
         if (result === signInAction) {
